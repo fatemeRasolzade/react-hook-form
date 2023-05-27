@@ -2,6 +2,7 @@ import "./App.css";
 import viteLogo from "/vite.svg";
 import reactLogo from "./assets/react.svg";
 import typeScriptLogo from "./assets/typeScript.svg";
+import SubmitForm from "./components/SubmitForm";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React + Ts</h1>
+      <SubmitForm />
     </>
   );
 }

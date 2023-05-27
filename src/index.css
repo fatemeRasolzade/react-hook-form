@@ -35,6 +35,17 @@ h1 {
   line-height: 1.1;
 }
 
+label {
+  margin-top: 1rem;
+  text-align: start;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -45,9 +56,25 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-top: 1rem;
 }
+
+input {
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  border: 1px solid #213547;
+}
+
+input:focus-visible {
+  outline: none;
+  border: 1px solid #747bff;
+}
+
 button:hover {
-  border-color: #646cff;
+  border-color: #747bff;
 }
 button:focus,
 button:focus-visible {
