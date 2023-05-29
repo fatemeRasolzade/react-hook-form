@@ -1,13 +1,22 @@
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 
+type FormValues = {
+  username: string;
+  password: string;
+};
+
 const SubmitForm = () => {
-  const form = useForm();
-  const { register, control } = form;
+  const form = useForm<FormValues>();
+  const { register, control, handleSubmit } = form;
+
+  const onSubmit = (data: FormValues) => {
+    console.log("Form submitted", data);
+  };
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="username">Username</label>
         <input type="text" id="username" {...register("username")} />
 
